@@ -77,17 +77,17 @@ function RotatingBadge() {
         <defs>
           <path
             id="badge-arc"
-            d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"
+            d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"
             fill="none"
           />
         </defs>
         <text
           className="fill-current font-sans"
-          fontSize="10.5"
-          letterSpacing="2.5"
+          fontSize="9"
+          letterSpacing="1.6"
         >
           <textPath href="#badge-arc">
-            SMALL BATCH · MADE SLOWLY · SINCE 2019 ·
+            SMALL BATCH · MADE SLOWLY · EST. 2019 ·
           </textPath>
         </text>
       </svg>
@@ -151,7 +151,7 @@ function Hero() {
               </div>
             )}
           </div>
-          <div className="absolute -top-10 right-2 hidden text-ink sm:block">
+          <div className="absolute -top-8 -left-12 hidden text-ink sm:block lg:-left-14">
             <RotatingBadge />
           </div>
         </div>
@@ -166,7 +166,7 @@ function Ticker() {
     id: `tick-${label}-${i}`,
   }));
   return (
-    <div className="border-y border-line py-4">
+    <div className="overflow-hidden border-y border-line py-4">
       <div
         className="marquee-slow flex w-max items-center gap-10"
         aria-hidden="true"
